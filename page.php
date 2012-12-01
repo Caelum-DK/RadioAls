@@ -26,6 +26,7 @@
 
 		<div style="clear:both"></div>
 	</div>
+	<?php get_template_part( 'banner_right'); ?>
 </div>
 		
 <?php get_footer(); ?>
