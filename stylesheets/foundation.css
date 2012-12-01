@@ -493,8 +493,8 @@
 	#banner_footer aside:first-child {
 		margin-left: 0;
 	}
-	aside.shadow120x { padding-bottom: 0px; background: url('../images/shadow_120x.png') no-repeat center bottom; position: absolute; top: 0; right: -140px;}
-	.banner_right aside ul, .banner_right aside li { margin: 0;}
+	aside.shadow120x { padding-bottom: 12px; background: url('../images/shadow_120x.png') no-repeat center bottom; position: absolute; top: 0; right: -140px;}
+	#banner_right aside ul, #banner_right aside li { margin: 0;}
 
 	#banner_footer aside.shadow300x { padding-bottom: 12px; background: url('../images/shadow_300x.png') no-repeat center bottom;}
 	#banner_footer aside.shadow180x { padding-bottom: 12px; background: url('../images/shadow_180x.png') no-repeat center bottom;}

@@ -1,5 +1,5 @@
 <!-- banner spot right -->
-		<div class="banner_right">
+		<div id="banner_right">
 			<aside class=" shadow120x">
 
 				<ul>
