@@ -41,7 +41,7 @@
 				<div style="clear:both"></div>
 			</div>
 			
-			<div class="facebook content_heading h-right">
+			<div class="facebook content_heading facebook_heading h-right">
 				<h1>Facebook</h1>
 			</div>
 			<!-- facebook area -->

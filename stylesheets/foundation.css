@@ -380,6 +380,7 @@
 		color: #fff;
 		height: 32px;
 	}
+	.content_heading.facebook_heading { background: url('../images/content_heading-bg_facebook.png');}
 	.content_heading.full {
 		border-top-left-radius: 10px;
 		-webkit-border-top-left-radius: 10px;    
