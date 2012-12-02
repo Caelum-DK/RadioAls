@@ -1349,3 +1349,9 @@ div.slider-nav span.left {
 		.flyout.small, .flyout.large { width: auto; }
 		.flyout p:last-child { margin-bottom: 18px; }
 	}*/
+
+.screenReader { 
+ left: -9999px; 
+ position: absolute; 
+ top: -9999px;
+}
