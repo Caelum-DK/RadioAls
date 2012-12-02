@@ -399,13 +399,13 @@
 		-webkit-border-top-right-radius: 10px;    
 		-moz-border-top-right-radius: 10px;
 	}
-	.content_heading h1 {
-		font-size: 19px;
+	.content_heading h1, .content_heading h2 {
 		text-transform: uppercase;
 		color: inherit;
 		line-height: 35px;
-		padding-left: 15px;
 	}
+	.content_heading h1 { padding-left: 15px; font-size: 19px; float: left;}
+	.content_heading h2 { padding-right: 15px; font-size: 14px; float: right;}
 
 	.shadow_wrap_800px {
 		background: url('../images/800xshadow.png') no-repeat center bottom;

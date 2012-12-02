@@ -7,7 +7,8 @@
 
 		<div class="content_heading full twelve columns">
 				<h1><?php the_title(); ?></h1>
-			</div>
+				<h2><?php the_field('subtitle'); ?></h2>
+		</div>
 
 		<div class="page-left columns seperator">
 
