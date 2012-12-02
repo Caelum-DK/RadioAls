@@ -12,7 +12,7 @@
 				<?php the_title(); ?>
 				<img scr="<?php echo get_template_directory_uri(); ?>/images/button-read_more.png" />
 			</a>
-			<?php sfc_like_button(); ?>
+			sfc_share_button();
 		</h2>
 		<div>
 			<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
