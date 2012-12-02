@@ -10,7 +10,7 @@
 				<h2><?php the_field('subtitle'); ?></h2>
 		</div>
 
-		<div class="page-left columns seperator">
+		<div class="page-left columns">
 
 			<div class="content-entry">
 			
@@ -19,7 +19,9 @@
 			</div>
 
 		</div>
-		<div class="page-right columns right_seperator">
+		<div class="page_splitter"></div>
+		<div class="page-right columns">
+			<hr class="sidebar_hr">
 			<div class="content-entry">
 				<?php echo get_the_post_thumbnail( $post_id, $size, $attr ); ?>
 			</div>

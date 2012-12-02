@@ -160,7 +160,7 @@
 	blockquote cite:before { content: "\2014 \0020"; }
 	blockquote cite a, blockquote cite a:visited { color: #555; }
 	
-	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 12px 0 18px; height: 0; }
+	hr { border: solid #c1c1c1; border-width: 1px 0 0; clear: both; margin: 12px 0 18px; height: 0; }
 	
 	abbr, acronym { text-transform: uppercase; font-size: 90%; color: #222; border-bottom: 1px solid #ddd; cursor: help; }
 	abbr { text-transform: none; }
@@ -203,8 +203,10 @@
 	/* To fix the grid into a certain size, set max-width to width */
 	.row .row { min-width: 0; }
 
-	.seperator { border-right: #b8b8b8 solid 1px;}
-	.right_seperator { border-left: #b8b8b8 solid 1px;}
+	.seperator { border-right: #c1c1c1 solid 1px;}
+	.right_seperator { border-left: #c1c1c1 solid 1px;}
+	.page_splitter { border-left: #c1c1c1 solid 1px; width: 1px; height: 230px; float: left;}
+	.sidebar_hr { margin: 35px 16px 10px}
 	
 	.column, .columns { margin-left: 4.4%; float: left; min-height: 1px; position: relative; }
 	.column:first-child, .columns:first-child { margin-left: 0; }
