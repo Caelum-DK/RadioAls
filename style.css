@@ -7,7 +7,7 @@ Author: Caelum I/S
 Author URI: http://caelum.dk
 Tags: nice
 */
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700");
 @import url("stylesheets/foundation.css");
 @import url("stylesheets/app.css");
 [if lt IE 9] @import url("stylesheets/ie.css");
