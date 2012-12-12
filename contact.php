@@ -22,6 +22,11 @@ if(isset($_POST['submitted'])) {
 		} else {
 			$name = trim($_POST['contactName']);
 		}
+
+		//post the phone number
+		
+		$tlf = trim($_POST['tlf']);
+		
 		
 		//Check to make sure sure that a valid email address is submitted
 		if(trim($_POST['email']) === '')  {
@@ -49,11 +54,11 @@ if(isset($_POST['submitted'])) {
 		//If there is no error, send the email
 		if(!isset($hasError)) {
 
-			$emailTo = 'kontakt@caelum.dk';
-			$subject = 'Kontaktformular, besked fra '.$name;
+			$emailTo = 'seedorff.himself@gmail.com';
+			$subject = 'Radio Als kontaktformular, besked fra '.$name;
 			$sendCopy = trim($_POST['sendCopy']);
-			$body = "Navn: $name \n\nEmail: $email \n\nBesked: $comments";
-			$headers = 'From: Radio Als <'.$email.'>' . "\r\n" . 'Reply-To: ' . $email;
+			$body = "Navn: $name \nTlf: $tlf \nEmail: $email \nBesked: $comments";
+			$headers = 'From: '.$name.' <'.$email.'>' . "\r\n" . 'Reply-To: ' . $email;
 			
 			mail($emailTo, $subject, $body, $headers);
 
@@ -80,7 +85,7 @@ if(isset($_POST['submitted'])) {
 				<h2><?php the_field('subtitle'); ?></h2>
 		</div>
 
-		<div class="page-left columns">
+		<div class="page-left columns contact_seperator">
 
 			<div class="content-entry">
 
@@ -116,6 +121,11 @@ if(isset($_POST['submitted'])) {
 									</li>
 									
 									<li>
+										<input type="text" class="input-text" name="tlf" id="tlf" placeholder="Tlf" value="<?php if(isset($_POST['tlf']))  echo $_POST['tlf'];?>" />
+										
+									</li>
+
+									<li>
 										<input type="text" class="input-text" name="email" id="email" placeholder="Email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="requiredField email" />
 										<?php if($emailError != '') { ?>
 											<span class="error"><?=$emailError;?></span>
@@ -139,8 +149,32 @@ if(isset($_POST['submitted'])) {
 						<?php endif; ?>
 					<?php } ?>
 				</div>
-			</div>
 
+			</div>
+			<div class="content_heading h-left">
+				<h1><?php the_field('2ndheading'); ?></h1>
+			</div>
+			<div id="contact_meta">
+				<ul class="meta_column">
+					<li class="contact_icon phone">Telefon:</li>
+					<li class="contact_icon fax">Fax:</li>
+					<br />
+					<li class="contact_icon phone">Musiktelefon:</li>
+					<li class="contact_icon mobile">SMS:</li>
+					<br />
+					<li class="contact_icon phone_pink">Vagttelefon:</li>
+				</ul>
+				<ul class="meta_column">
+					<li class="contact_number">123</li>
+					<li class="contact_number">123</li>
+					<br />
+					<li class="contact_number">123</li>
+					<li class="contact_number">123</li>
+					<br />
+					<li class="contact_number">123</li>
+				</ul>
+				<div style="clear: both;"></div>
+			</div>
 		</div>
 		<div class="page_splitter"></div>
 		<div class="page-right columns">

@@ -204,6 +204,7 @@
 	.row .row { min-width: 0; }
 
 	.seperator { border-right: #c1c1c1 solid 1px;}
+	.contact_seperator { border-right: #c1c1c1 solid 1px; margin-right: -1px; margin-bottom: 20px;}
 	.right_seperator { border-left: #c1c1c1 solid 1px;}
 	.page_splitter { border-left: #c1c1c1 solid 1px; width: 1px; height: 230px; float: left;}
 	.sidebar_hr { margin: 35px 16px 10px}
@@ -269,6 +270,21 @@
 	 .row:after, .clearfix:after { clear: both; }
 	 .row, .clearfix { zoom: 1; }
 	 
+	#contact_meta { clear: both; padding: 0 15px;}
+	.meta_column { width: 140px; float: left; font-size: 15px; font-style: italic;}
+	.contact_icon { 
+		padding-left: 18px;
+	}
+	.contact_icon, .contact_number { margin-bottom: 3px;}
+	.contact_icon.phone { background: url('../images/kontakt/phone.png');}
+	.contact_icon.fax { background: url('../images/kontakt/fax.png');}
+	.contact_icon.mobile { background: url('../images/kontakt/mobile.png');}
+	.contact_icon.phone_pink { background: url('../images/kontakt/phone_pink.png'); font-weight: 600; color: #ec008c;}
+
+	.contact_icon.phone, .contact_icon.fax, .contact_icon.mobile, .contact_icon.phone_pink {
+		background-repeat: no-repeat;
+		background-position: left 3px;
+	}
 	 
 	
 	
@@ -818,6 +834,7 @@
 	.contact_form {
 		padding: 5px;
 	}
+	.contact_form h1 { font-size: 18px;}
 	.contact_form h3 {
 		font-size: 15px;
 		font-style: italic;
