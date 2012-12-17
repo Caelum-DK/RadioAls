@@ -17,6 +17,7 @@
 
 			<div class="weather content_heading h-left">
 				<h1>Vejret</h1>
+				<h2>Sønderborg</h2>
 			</div>
 
 			<!-- sidebar -->

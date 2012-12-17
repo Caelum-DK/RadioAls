@@ -54,7 +54,7 @@ if(isset($_POST['submitted'])) {
 		//If there is no error, send the email
 		if(!isset($hasError)) {
 
-			$emailTo = 'seedorff.himself@gmail.com';
+			$emailTo = 'radioals@radioals.dk';
 			$subject = 'Radio Als kontaktformular, besked fra '.$name;
 			$sendCopy = trim($_POST['sendCopy']);
 			$body = "Navn: $name \nTlf: $tlf \nEmail: $email \nBesked: $comments";
@@ -104,8 +104,7 @@ if(isset($_POST['submitted'])) {
 						
 						<?php while (have_posts()) : the_post(); ?>
 							<h3>mail: <a href="mailTo:radioals@radioals.dk" target="_blank" title="Send os en mail">radioals@radioals.dk »</a></h3>
-							<?php the_content(); ?>
-							
+														
 							<?php if(isset($hasError) || isset($captchaError)) { ?>
 								<p class="error">Fejl i de indtastede oplysninger!<p>
 							<?php } ?>
@@ -152,7 +151,7 @@ if(isset($_POST['submitted'])) {
 
 			</div>
 			<div class="content_heading h-left">
-				<h1><?php the_field('2ndheading'); ?></h1>
+				<h1><?php the_field('second_heading'); ?></h1>
 			</div>
 			<div id="contact_meta">
 				<ul class="meta_column">
@@ -165,13 +164,13 @@ if(isset($_POST['submitted'])) {
 					<li class="contact_icon phone_pink">Vagttelefon:</li>
 				</ul>
 				<ul class="meta_column">
-					<li class="contact_number">123</li>
-					<li class="contact_number">123</li>
+					<li class="contact_number"><?php the_field('telefon'); ?></li>
+					<li class="contact_number"><?php the_field('fax'); ?></li>
 					<br />
-					<li class="contact_number">123</li>
-					<li class="contact_number">123</li>
+					<li class="contact_number"><?php the_field('musiktelefon'); ?></li>
+					<li class="contact_number"><?php the_field('sms'); ?></li>
 					<br />
-					<li class="contact_number">123</li>
+					<li class="contact_number"><?php the_field('vagttelefon'); ?></li>
 				</ul>
 				<div style="clear: both;"></div>
 			</div>
@@ -179,8 +178,12 @@ if(isset($_POST['submitted'])) {
 		<div class="page_splitter"></div>
 		<div class="page-right columns">
 			<hr class="sidebar_hr">
-			<div class="content-entry">
+			<div class="content-entry contact">
 				<?php echo get_the_post_thumbnail( $post_id, $size, $attr ); ?>
+				<?php the_content(); ?>
+				<div class="shadow280x">
+					<iframe width="280" height="280" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=+&amp;q=Radio+Als+Peblingestien+1,+6430+Nordborg&amp;ie=UTF8&amp;hq=Radio+Als+Peblingestien+1,&amp;hnear=Nordborg,+Denmark&amp;t=m&amp;ll=55.056423,9.743586&amp;spn=0.003441,0.005987&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
+				</div>
 			</div>
 		</div>
 
