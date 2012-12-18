@@ -11,3 +11,24 @@ Tags: nice
 @import url("stylesheets/foundation.css");
 @import url("stylesheets/app.css");
 [if lt IE 9] @import url("stylesheets/ie.css");
+
+.nar{
+	width: 50% !important;
+}
+aside.weather { margin: 0 0px 0 0px;}
+aside.weather table {
+	width: 40% !important;
+	float: left;
+	height: 80px;
+	margin-left: 30px;
+	line-height: 80px;
+}
+aside.weather .Table1 { border-right: 1px solid #ddd;}
+aside.weather .Table1 p { padding-right: 30px;}
+aside.weather .Table1 img {
+	float: left;
+	margin-top: -10px;
+}
+aside.weather .Table2 {
+	display: none !important;
+}

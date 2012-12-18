@@ -116,7 +116,7 @@
 
 	table tbody tr.even,
 	table tbody tr.alt { background: #f9f9f9; }
-	table tbody tr:nth-child(even) { background: #f9f9f9; }
+	table tbody tr:nth-child(even) { background: none; }
 	table tbody tr td { color: #333; padding: 9px 10px; vertical-align: top; border: none; }
 
 /* -------------------------------------------------- 
@@ -525,6 +525,7 @@
 	#banner_footer aside ul, #banner_footer aside li { margin: 0;}
 
 	.footer { color: #fff; font-size: 12px; text-align: center; margin-top: 20px; margin-bottom: 80px;}
+	.footer a { color: #fff; font-weight: normal;}
 
 /*	--------------------------------------------------
 	Buttons

@@ -19,16 +19,15 @@
 				<h1>Vejret</h1>
 				<h2>Sønderborg</h2>
 			</div>
-
 			<!-- sidebar -->
-			<aside>
+			<aside class="weather">
 
 				<ul>
 					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Weather Widget')) : ?>
 					
 					<?php endif; ?>
 				</ul>
-
+				<div style="clear: both;"></div>
 			</aside>
 			<!-- sidebar -->
 			
