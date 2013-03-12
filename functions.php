@@ -73,6 +73,16 @@ if (function_exists('register_sidebar')) {
 		'after_title' => '</h4>',
 	));
 
+	// RSS widget area
+
+	register_sidebar(array(
+		'name'=> 'RSS Widget',
+		'id' => 'rss_widget',
+		'before_widget' => '<div id="%1$s" class=" %2$s">',
+		'after_widget' => '</div>',
+	));
+
+
 	// Weather widget area
 
 	register_sidebar(array(
@@ -151,6 +161,22 @@ if (function_exists('register_sidebar')) {
 	));
 }
 
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+	register_post_type( 'calendar',
+		array(
+			'labels' => array(
+				'name' => __( 'Programmer' ),
+				'singular_name' => __( 'Program' )
+			),
+		'public' => true,
+		'exclude_from_search' => true,
+		'has_archive' => true,
+		)
+	);
+}
+add_image_size( 'news_thumb', 95, 65, true ); // crop mode
+
 // Comments
 
 // Custom callback to list comments in the Foundation style
@@ -211,6 +237,11 @@ function commenter_link() {
     echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
 } // end commenter_link
 
+//Image sizes
+
+if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'standard', 445, 250, true ); //(cropped)
+}
 
 // Orbit, for WordPress
 

@@ -11,9 +11,27 @@
 	<div class="content_wrapper">
 		<div class="front-left columns seperator">
 			<div class="content_heading h-left">
-				<h1>Nyheder</h1>
+				<h1>Lokale nyheder</h1>
+				<h2><?php echo date('d.m.Y'); ?></h2>
 			</div>
 			<?php get_template_part( 'loop', 'index' ); ?>
+
+			<div class="rss content_heading h-left">
+				<h1>Landsdækkende nyheder</h1>
+				<h2><?php echo date('d.m.Y'); ?></h2>
+			</div>
+			<!-- sidebar -->
+			<aside class="rss">
+
+				<ul>
+					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('RSS Widget')) : ?>
+					
+					<?php endif; ?>
+				</ul>
+				<div style="clear: both;"></div>
+			</aside>
+			<!-- sidebar -->
+
 
 			<div class="weather content_heading h-left">
 				<h1>Vejret</h1>
@@ -59,18 +77,20 @@
 			<!-- facebook area -->
 
 			<div class="kalender content_heading h-right">
-				<h1>Kalender</h1>
+				<h1>Dagens program</h1>
 			</div>
 			<!-- kalender area -->
-			<aside>
+			<?php 
+				$args = array( 'post_type' => 'calendar', 'posts_per_page' => 1, 'name' => date('D') );
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post();
+					echo '<div class="entry-content">';
+					the_content();
+					echo '</div>';
+				endwhile;
+			 ?>
 
-				<ul>
-					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Kalender Widget')) : ?>
-			
-					<?php endif; ?>
-				</ul>
 
-			</aside>
 			<div style="clear:both"></div>
 
 			<!-- kalender area -->

@@ -15,7 +15,7 @@ Tags: nice
 .nar{
 	width: 50% !important;
 }
-aside.weather { margin: 0 0px 0 0px;}
+aside.weather { margin: 0 0px 10px;}
 aside.weather table {
 	width: 40% !important;
 	float: left;
@@ -23,6 +23,8 @@ aside.weather table {
 	margin-left: 30px;
 	line-height: 80px;
 }
+aside.weather table tbody tr:nth-child(even), aside.weather table { background: none;}
+
 aside.weather .Table1 { border-right: 1px solid #ddd;}
 aside.weather .Table1 p { padding-right: 30px;}
 aside.weather .Table1 img {
@@ -32,3 +34,42 @@ aside.weather .Table1 img {
 aside.weather .Table2 {
 	display: none !important;
 }
+aside.rss {
+	height: auto;
+	overflow: hidden;
+}
+aside.rss ul {
+	margin: 0px 0 0px;
+} 
+aside.rss a {
+	color: #db6100;
+	padding-left: 10px;
+}
+aside.rss ul div div {
+	margin: 0;
+}
+.kalender table {
+	border: 0;
+}
+.hosts img {
+	box-shadow: 0px 5px 10px #888888;
+	margin-bottom: 5px;
+	width: 200px;
+	height: auto;
+}
+.hosts table {
+	background: none;
+}
+.contact_form input.input-text, .contact_form textarea { width: 410px}
+.signup input.input-text, .signup textarea, .signup span { float: left;}
+.signup input.input-text.long { width: 300px;}
+.signup input.input-text.short { width: 137px; margin-right: 5px;}
+.signup br { clear: both;}
+
+.priser .page-left.columns 	{ width: 665px;}
+.priser .page-right.columns 	{ width: 130px;}
+.priser .page-right.columns .content-entry { padding: 0;}
+.priser .page-right.columns img { float: right; margin-right: -4px;}
+
+.ui-accordion-content { height: auto;}
+

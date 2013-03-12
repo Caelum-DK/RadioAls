@@ -16,15 +16,17 @@
 		</h2>
 		<div>
 			<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
-					<?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?>
+					<?php the_time('d.m.Y') ?>
 					
 					<!-- Display the Post's Content in a div box. -->
 					<div class="post-thumb">
-						<?php echo get_the_post_thumbnail( $post_id, $size, $attr ); ?>
+						<?php echo get_the_post_thumbnail( $post_id, 'news_thumb', $attr ); ?>
 					</div>
+
 					<div class="entry">
-						<?php the_excerpt(); ?>
+						<?php the_content(); ?>
 					</div>
+					<div style="clear:both;"></div>
 		</div>
 		
 		<!-- Stop The Loop (but note the "else:" - see next line). -->

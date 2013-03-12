@@ -24,11 +24,13 @@
 	<?php wp_head(); ?>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-  
+
 	<script>
-	  $(document).ready(function() {
-	    $("#accordion").accordion();
-	  });
+	  $(function() {
+    $( "#accordion" ).accordion({
+      heightStyle: "content"
+    });
+  });
 	</script>
 	<script language="javascript">
 		<!-- Begin
@@ -61,9 +63,7 @@
 						<div id="listen">							
 							<div id="now_playing">
 								<h2><a target="_self" href="javascript:popUp('http://radioals.dk/stream/RadioAls.html')">Hør Netradio</a></h2>
-								<div id="now_playing-shadow">
-									<span id="now_playing-text">→ Now Playing</span>
-								</div>	
+								
 							</div>
 						</div>
 					</hgroup>	

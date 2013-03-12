@@ -87,7 +87,7 @@
 	<script src="<?php bloginfo('template_url'); ?>/javascripts/foundation.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/javascripts/orbit-1.3.0.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/javascripts/app.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/javascripts/jquery-ui-1.10.1.custom.min.js"></script>
 
 
 	<?php wp_footer(); ?>
